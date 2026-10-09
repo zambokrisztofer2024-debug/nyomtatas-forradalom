@@ -1,0 +1,229 @@
+/* Alapbeállítások */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5efdf;
+    color: #28231e;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+a {
+    color: #812e32;
+}
+
+header, main, footer {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Fejléc és menü */
+header {
+    padding: 20px 0;
+    border-bottom: 2px solid #812e32;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.brandmark {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav a, .button {
+    display: inline-block;
+    background-color: #812e32;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav a:hover, .button:hover {
+    background-color: #572024;
+}
+
+nav a[aria-current='page'] {
+    background-color: #28231e;
+}
+
+/* Címek és szövegek */
+h1 {
+    font-size: 44px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h1 em, .eyebrow, .number, .date {
+    color: #812e32;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 30px 0;
+    border-bottom: 1px solid #b4a78e;
+}
+
+.lead {
+    max-width: 800px;
+    font-size: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+/* A főoldal kártyái és az aloldalak hasábjai */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card, .note, .comparison {
+    background-color: #e8ddc7;
+    padding: 20px;
+    border: 1px solid #b4a78e;
+    border-radius: 5px;
+}
+
+.card {
+    color: #28231e;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: #ddd0b5;
+}
+
+.cardlink {
+    color: #812e32;
+    text-decoration: underline;
+}
+
+.number {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.eras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.eras span, .eras strong {
+    padding: 8px;
+    border: 1px solid #b4a78e;
+}
+
+.eras strong {
+    background-color: #812e32;
+    color: white;
+}
+
+.steps, .impactgrid, .comparegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.timeline article {
+    padding: 20px 0;
+    border-top: 1px solid #b4a78e;
+}
+
+.date {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.note {
+    margin-bottom: 35px;
+    border-left: 5px solid #812e32;
+}
+
+.sources li {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 20px 0;
+    border-top: 2px solid #812e32;
+    font-size: 15px;
+}
+
+footer span {
+    display: block;
+    margin-top: 8px;
+}
+
+/* Billentyűzettel is könnyen használható legyen */
+a:focus-visible {
+    outline: 3px solid #812e32;
+    outline-offset: 4px;
+}
+
+.skip {
+    position: absolute;
+    top: -100px;
+    background-color: white;
+    padding: 10px;
+}
+
+.skip:focus {
+    top: 5px;
+}
+
+/* Mobilon a hasábok egymás alá kerülnek. */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .cards, .steps, .impactgrid, .comparegrid {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        flex: 1 1 40%;
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 18px;
+    }
+}
